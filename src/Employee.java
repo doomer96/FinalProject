@@ -5,7 +5,7 @@ public abstract class Employee implements Serializable {
     private String name;
     private String email;
     private String position;
-    private int performanceScore; // Новая функция: Оценка (1-100)
+    private int performanceScore;
 
     public Employee(String id, String name, String email, String position, int score) {
         this.id = id;
@@ -21,7 +21,7 @@ public abstract class Employee implements Serializable {
         return "Satisfactory";
     }
 
-    public abstract double calculateSalary(); // Абстрактный метод
+    public abstract double calculateSalary();
 
     public String getId() { return id; }
     public String getName() { return name; }
