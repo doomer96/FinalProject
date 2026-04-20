@@ -17,19 +17,16 @@ public class EmployeeApp extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
 
-        // Таблица
         String[] cols = {"ID", "Name", "Email", "Position", "Score", "Rating", "Salary"};
         tableModel = new DefaultTableModel(cols, 0);
         table = new JTable(tableModel);
         loadData();
         add(new JScrollPane(table), BorderLayout.CENTER);
 
-        // Панель управления
         JPanel panel = new JPanel();
         JButton btnAdd = new JButton("Add Employee");
         JButton btnDel = new JButton("Delete");
 
-        // Ограничение прав (Role-based access)
         if (!role.equals("Admin")) {
             btnAdd.setEnabled(false);
             btnDel.setEnabled(false);
@@ -39,7 +36,6 @@ public class EmployeeApp extends JFrame {
         panel.add(btnDel);
         add(panel, BorderLayout.SOUTH);
 
-        // Логика кнопок
         btnAdd.addActionListener(e -> showAddDialog());
         btnDel.addActionListener(e -> {
             int row = table.getSelectedRow();
@@ -69,12 +65,11 @@ public class EmployeeApp extends JFrame {
     }
 
     private void showAddDialog() {
-        // Здесь можно создать маленькое окно с полями JTextField для ввода
-        // Для краткости: вызываем ввод через JOptionPane
+
         String id = JOptionPane.showInputDialog("Enter ID:");
         String name = JOptionPane.showInputDialog("Enter Name:");
         String email = JOptionPane.showInputDialog("Enter Email:");
-        // Простая валидация
+
         if (!email.contains("@")) {
             JOptionPane.showMessageDialog(this, "Invalid Email!");
             return;
@@ -87,7 +82,7 @@ public class EmployeeApp extends JFrame {
     }
 
     public static void main(String[] args) {
-        // Окно входа (Auth)
+
         String user = JOptionPane.showInputDialog("Username:");
         String pass = JOptionPane.showInputDialog("Password:");
 
