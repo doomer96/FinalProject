@@ -15,6 +15,6 @@ Employee Information System - Простая и удобная система д
 База данных: Надежное хранение всех данных в локальном файле
 
 Презентация:
-https://api.abcdoffice.com/cache/files/data/aUyiHuOdrgNMd0L_6736/output.pptx/b5bb04e08a5f46b4ab29252ac8f01cc2.pptx?md5=uLLNjLDoGmbce-j-pJ_2_g&expires=1776618277&filename=b5bb04e08a5f46b4ab29252ac8f01cc2.pptx
+https://docs.google.com/document/d/1l1yxFJJiqkRB04WuW8s-otkDzicbMNreTg0f8hPqeRM/edit?usp=drivesdk
 
 
